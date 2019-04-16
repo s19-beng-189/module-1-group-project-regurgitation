@@ -12,8 +12,8 @@ Psa=(B2*C11-B1*C12)/D;
 if (CHECK)
   LHS1=(CLV*PLV-CLV_old*PLV_old)/dt;
   RHS1=(SMi/RMi)*(PLA-PLV)-(SAo/RAo)*(PLV-Psa);
-  CH1=RHS1-LHS1
+  CH1=RHS1-LHS1;
   LHS2=Csa*(Psa-Psa_old)/dt;
   RHS2=(SAo/RAo)*(PLV-Psa)-(1/Rs)*Psa;
-  CH2=RHS2-LHS2
+  CH2=RHS2-LHS2;
 end
