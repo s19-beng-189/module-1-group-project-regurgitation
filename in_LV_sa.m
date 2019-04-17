@@ -1,11 +1,12 @@
 %filename: in_LV_sa.m  (initialization for LV_sa)
-%T =0.0125    %Duration of heartbeat (minutes)
-T = 0.0055   % new heart rate (150 bpm)
+T =0.0125    %Duration of heartbeat (minutes)
+%T = 0.0055   % new heart rate (150 bpm)
 TS=0.0050    %Duration of systole   (minutes)
 tauS=0.0025  %CLV time constant during systole (minutes)
 tauD=0.0075  %CLV time constant during diastole (minutes)
-%Rs=17.86     %Systemic resistance (mmHg/(liter/minute))
-Rs=17.86/2   %syst resistance reduced by 2  
+Rs=17.86     %Systemic resistance (mmHg/(liter/minute))
+Rs = 20     %increase resistance to increase blood pressure
+%Rs=17.86/2   %syst resistance reduced by 2  
 %Valve resistances here are not supposed to be realistic,
 %just small enough to be negligible:
 RMi=0.01     %mitral valve resistance (mmHg/(liter/minute))

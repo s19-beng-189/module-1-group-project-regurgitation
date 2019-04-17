@@ -5,7 +5,7 @@ global T TS tauS tauD;
 global Csa Rs RMi RAo dt CHECK PLA;
 in_LV_sa  %initialize
 
-% %% Find New Csa Value
+%% Find New Csa Value
 % CsaValue = linspace(0.00001, 0.04);
 % for n = 1:length(CsaValue)
 %     Csa = CsaValue(n);
@@ -38,11 +38,10 @@ in_LV_sa  %initialize
 % end
 % min_err = min(err_ESP); %error is 0.3281
 % v = err_ESP == min_err;
-% Csa = sum(CsaValue*v'); %new Csa value 0.00081788 to get ESP = 120
-% % EDP does not reach 80, to make EDP accurate choose Csa = 0.002
+% Csa = sum(CsaValue*v'); %new Csa value 0.0012
 
 %% plot results:
-Csa = 0.00081788;
+Csa = 0.0012;
 for klok=1:klokmax  
         t=klok*dt;
         PLV_old=PLV;
@@ -54,7 +53,7 @@ for klok=1:klokmax
         set_SMi_SAo
   %store in arrays for future plotting:
         t_plot(klok)=t;
-        CLV_plot(klok)=CLV;
+        CLV_plot(klok)=CLV*1.75;
         PLV_plot(klok)=PLV;
         Psa_plot(klok)=Psa;
         VLV_plot(klok)=CLV*PLV+VLVd;
