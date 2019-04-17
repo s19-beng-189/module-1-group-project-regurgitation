@@ -69,8 +69,8 @@ subplot(3,1,1), plot(t_plot,CLV_plot)
 subplot(3,1,2), plot(t_plot,PLV_plot,t_plot,Psa_plot)
 subplot(3,1,3), plot(t_plot,QMi_plot,t_plot,QAo_plot,t_plot,Qs_plot)
 %left ventricular pressure-volume loop
-figure(2)
-plot(VLV_plot,PLV_plot)
-%systemic arterial pressure-volume ``loop''
-figure(3)
-plot(Vsa_plot,Psa_plot)
+% figure(2)
+% plot(VLV_plot,PLV_plot)
+% %systemic arterial pressure-volume ``loop''
+% figure(3)
+% plot(Vsa_plot,Psa_plot)
