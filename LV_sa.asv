@@ -53,7 +53,8 @@ for klok=1:klokmax
         set_SMi_SAo
   %store in arrays for future plotting:
         t_plot(klok)=t;
-        %CLV_plot(klok)=CLV*1.75;
+        CLV_plot(klok)=CLV*1.75;
+        CLV_plot(klok)=CLV
         PLV_plot(klok)=PLV;
         Psa_plot(klok)=Psa;
         VLV_plot(klok)=CLV*PLV+VLVd;
