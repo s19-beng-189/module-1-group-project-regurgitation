@@ -28,15 +28,22 @@ for klok=1:klokmax
 end
 %plot results:
 figure(1)
-subplot(3,1,1), plot(t_plot,CLV_plot)
-subplot(3,1,2), plot(t_plot,PLV_plot,t_plot,Psa_plot)
-subplot(3,1,3), plot(t_plot,QMi_plot,t_plot,QAo_plot,t_plot,Qs_plot)
-%left ventricular pressure-volume loop
+plot(t_plot,CLV_plot); xlabel('Time (s)'); ylabel('CLV (L/mmHg)'); title('Left Ventriclular Compliance');
+
 figure(2)
-plot(VLV_plot,PLV_plot)
-%systemic arterial pressure-volume ``loop''
+plot(t_plot,QAo_plot); xlabel('Time (s)'); ylabel('QAo (L/s)'); title('Flow Through Aorta');
+
+%left ventricular pressure-volume loop
 figure(3)
-plot(Vsa_plot,Psa_plot)
+plot(VLV_plot,PLV_plot); xlabel('Volume (L)'); ylabel('Pressure (mmHg)'); title('Left Ventricle PV Loop');
 
 figure(4)
-plot(t_plot,Psa_plot)
+plot(t_plot,Psa_plot); xlabel('Time (s)'); ylabel('Psa (mmHg)'); title('Systemic Pulse Pressure');
+
+figure(5)
+plot(t_plot,QMi_plot); xlabel('Time (s)'); ylabel('QMi (L/s)'); title('Flow Through Mitral Valve');
+
+
+
+
+

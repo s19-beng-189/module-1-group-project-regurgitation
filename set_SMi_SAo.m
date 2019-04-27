@@ -8,7 +8,10 @@ while(~done)  %keep trying if not done (see below)
   % set pressures based on valve states:
   [PLV,Psa]=PLV_Psa_new(PLV_old,Psa_old,CLV_old,CLV,SMi,SAo);
   %and then set valve states based on pressures:
-  SMi=(PLA>PLV); %evaluates to 1 if PLA>PLV, 0 otherwise
+  
+  %at +1.1 to model mitral valve regurgitation:
+  SMi=(PLA+1.1>PLV); %evaluates to 1 if PLA>PLV, 0 otherwise
+  
   SAo=(PLV>Psa); %evaluates to 1 if PLV>Psa, 0 otherwise
   %we're done if both valve states are unchanged:
   done=(SMi==SMi_noted)&(SAo==SAo_noted);
