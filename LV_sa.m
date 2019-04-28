@@ -28,20 +28,20 @@ for klok=1:klokmax
 end
 %plot results:
 figure(1)
-plot(t_plot,CLV_plot); xlabel('Time (s)'); ylabel('CLV (L/mmHg)'); title('Left Ventriclular Compliance');
+plot(t_plot,PLV_plot); xlabel('Time (min)','FontSize',18); ylabel('PLV (mmHg)','FontSize',18); title('Left Ventricular Pressure','FontSize',18);
 
 figure(2)
-plot(t_plot,QAo_plot); xlabel('Time (s)'); ylabel('QAo (L/s)'); title('Flow Through Aorta');
+plot(t_plot,QAo_plot); xlabel('Time (min)','FontSize',18); ylabel('QAo (L/min)','FontSize',18); title('Flow Through Aorta','FontSize',18);
 
 %left ventricular pressure-volume loop
 figure(3)
-plot(VLV_plot,PLV_plot); xlabel('Volume (L)'); ylabel('Pressure (mmHg)'); title('Left Ventricle PV Loop');
+plot(VLV_plot,PLV_plot); xlabel('Volume (L)','FontSize',18); ylabel('Pressure (mmHg)','FontSize',18); title('Left Ventricle PV Loop','FontSize',18);
 
 figure(4)
-plot(t_plot,Psa_plot); xlabel('Time (s)'); ylabel('Psa (mmHg)'); title('Systemic Pulse Pressure');
+plot(t_plot,Psa_plot); xlabel('Time (min)','FontSize',18); ylabel('Psa (mmHg)','FontSize',18); title('Systemic Pulse Pressure','FontSize',18);
 
 figure(5)
-plot(t_plot,QMi_plot); xlabel('Time (s)'); ylabel('QMi (L/s)'); title('Flow Through Mitral Valve');
+plot(t_plot,QMi_plot); xlabel('Time (min)','FontSize',18); ylabel('QMi (L/min)','FontSize',18); title('Flow Through Mitral Valve','FontSize',18);
 
 
 
