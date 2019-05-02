@@ -1,9 +1,9 @@
 %filename: in_LV_sa.m  (initialization for LV_sa)
-T =0.0125    %Duration of heartbeat (minutes)
-TS=0.0050    %Duration of systole   (minutes)
-tauS=0.0025  %CLV time constant during systole (minutes)
-tauD=0.0075  %CLV time constant during diastole (minutes)
-Rs=20    %Systemic resistance (mmHg/(liter/minute))
+T =0.0125/2    %Duration of heartbeat (minutes)
+TS=0.0050/2   %Duration of systole   (minutes)
+tauS=0.0025/2  %CLV time constant during systole (minutes)
+tauD=0.0075/2  %CLV time constant during diastole (minutes)
+Rs=20/2    %Systemic resistance (mmHg/(liter/minute))
 %Valve resistances here are not supposed to be realistic,
 %just small enough to be negligible:
 RMi=0.01     %mitral valve resistance (mmHg/(liter/minute))
@@ -15,7 +15,7 @@ CLVS=0.00003 %Min (systolic)  value of CLV (liters/mmHg)
 CLVD=0.0146  %Max (diastolic) value of CLV (liters/mmHg)
 Vsad=0.825   %Systemic arterial volume when Psa=0 (liters)
 VLVd=0.027   %Left ventricular volume when PLV=0 (liters)
-PLA=5        %Left atrial pressure (mmHg)
+PLA=5       %Left atrial pressure (mmHg)
 dt=0.01*T    %Time step duration (minutes)
 %This choice implies 100 timesteps per cardiac cycle.
 klokmax=15*T/dt %Total number of timesteps 
