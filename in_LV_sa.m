@@ -10,12 +10,12 @@ RMi=0.01     %mitral valve resistance (mmHg/(liter/minute))
 RAo=0.01     %aortic valve resistance (mmHg/(liter/minute))
 %The following value of Csa is approximate;
 %needs adjustment to make blood pressure 120/80:
-Csa=0.0012/2  %Systemic arterial compliance (liters/mmHg)
+Csa=0.0012  %Systemic arterial compliance (liters/mmHg)
 CLVS=0.00003 %Min (systolic)  value of CLV (liters/mmHg)
 CLVD=0.0146  %Max (diastolic) value of CLV (liters/mmHg)
 Vsad=0.825   %Systemic arterial volume when Psa=0 (liters)
-VLVd=0.027   %Left ventricular volume when PLV=0 (liters)
-PLA=5       %Left atrial pressure (mmHg)
+VLVd=0.027*1.5   %Left ventricular volume when PLV=0 (liters)
+PLA=5*1.5       %Left atrial pressure (mmHg)
 dt=0.01*T    %Time step duration (minutes)
 %This choice implies 100 timesteps per cardiac cycle.
 klokmax=15*T/dt %Total number of timesteps 
